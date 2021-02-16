@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        FiringSign {
+            keyAlias 'firingsignkey'
+            keyPassword '911911'
+            storePassword '94gjtMez6XO5gyy'
+            storeFile file('D:/Development/IDE/Android/Android Studio/FiringSign.jks')
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+    defaultConfig {
+        applicationId "mrfiring.selectiontraining"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 4
+        versionName '1.2.1'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.FiringSign
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.FiringSign
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.google.android.gms:play-services-ads:11.0.0'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/json-simple-1.1.1.jar')
+}

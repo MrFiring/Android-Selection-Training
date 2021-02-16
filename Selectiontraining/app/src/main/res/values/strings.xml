@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Прокачай себя</string>
+
+    <string name="welcome_header">Добро пожаловать!</string>
+
+    <string name="selection_btn_text">Подобрать программу</string>
+    <string name="program_comment">Данный тренировочный план не является догмой, так как одно и то же упражнение на двух людей может действовать по разному - иными словами на одном работать, а на другом не работать.\nИсходя из это следует, что можно менять и добавлять новые упражнения.\nНе желательно изменять количество подходов и повторений, так как это напрямую отразится на результате</string>
+
+    <string name="test_completed">Тест пройден!</string>
+    <string name="program_found">Программа подобрана!</string>
+
+    <string name="day_text">День</string>
+
+</resources>
